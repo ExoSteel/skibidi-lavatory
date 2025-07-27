@@ -20,8 +20,7 @@ def next():
 @app.route("/consequenceofactions", methods=["POST", "GET"])
 def yaai():
     if request.method == 'POST':
-        # email = request.form["email"]
-        email = "sjungxuan@gmail.com"
+        email = request.form["email"]
         password = request.form["password"]
         with sqlite3.connect("./data/database.db") as con:
             cur = con.cursor()
@@ -75,5 +74,6 @@ def deletion():
 
 
 if __name__ == "__main__":
-    socketio.run(app, debug=False, port=10000)
+    print("Starting...")
+    socketio.run(app, debug=True, port=2424)
 
