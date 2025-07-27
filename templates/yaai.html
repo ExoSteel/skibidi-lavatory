@@ -13,14 +13,40 @@
 </head>
 
 <body>
-	<h2>Account Registered</h2>
-    <p>Email: {{ email }}</p>
-    <p>Password: {{ password }}</p>
+    <div style="display: flex; justify-content:space-between;">
+        <div style="display: block;">
+            <h2>Account Registered</h2>
+            <p>Email: {{ email }}</p>
+            <p>Password: {{ password }}</p>
 
-    <h3>Live Account List:</h3>
-    <ul id="account-list">
-        <!-- JS will add new accounts here -->
-    </ul>
+            <h3>Live Account List:</h3>
+            <ul id="account-list">
+                <!-- JS will add new accounts here -->
+            </ul>
+        </div>
+
+        <div>
+            <video width="360" height="360" style="margin: auto;padding: auto;" controls autoplay muted loop>
+            <source src="{{ url_for('static', filename='/videos/brainrot.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+
+            <video width="360" height="360" style="margin: auto;padding: auto;" controls autoplay muted loop>
+            <source src="{{ url_for('static', filename='/videos/gamead2.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+
+            <video width="360" height="360" style="margin: auto;padding: auto;" controls autoplay muted loop>
+            <source src="{{ url_for('static', filename='/videos/pizza.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+
+        </div>
+        
+        
+
+    </div>
+	
 </body>
 
 </html>
