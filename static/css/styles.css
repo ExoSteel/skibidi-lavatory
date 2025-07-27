@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'Product Sans';
+  src: url('../fonts/ProductSans-Regular.woff2') format('woff2'),
+       url('../fonts/ProductSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
     background-color: #1E1F20;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', sans-serif;
 }
 
 p{
@@ -9,7 +17,7 @@ p{
 }
 
 .spacer{
-    padding: 25% 0px 0px 0px;
+    padding: 10em 0px 0px 0px;
 }
 
 .bubble{
@@ -80,8 +88,75 @@ p{
     padding: 0px 20px 0px 20px;
     border-width: 0px;
     font-family: 'Product Sans';
+    border: none;
 }
 
 .butt:hover{
     background-color: #b8d3ff;
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid white;
+    border-radius: 2px;
+    background-color: transparent;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 8px;
+    position: relative;
+}
+
+.custom-checkbox:checked {
+    background-color: #A8C7FA;
+    border-color: #A8C7FA;
+}
+
+.custom-checkbox:checked::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid #1E1F20;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+}
+
+.radio-wrap {
+    display: inline-block;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label.custom-radio {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid white;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    color: white;
+    background-color: #0E0E0E;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+input[type="radio"]:checked + label.custom-radio {
+    background-color: #0E0E0E;
+    color: white;
+}
+
+.arrow {
+    margin-left: 8px;
+    font-size: 12px;
 }

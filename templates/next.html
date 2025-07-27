@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YouTube</title>
+	<script>
+		function sleep(ms) {
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+		function openPopup() {
+		window.open("https://you-are-idiot.github.io/", "_blank", "width=600,height=400");
+		}
+  </script>
+</head>
+
+<body>
+	<div class="spacer"></div>
+
+	<div class="bubble">
+		<div><img src="../static/images/google.png" style="width: 50px; height: 50px;"></div>
+		<div>
+			<h1>Hello,</h1>
+			<div class="radio-wrap">
+				<input type="radio" id="email1" name="email" checked>
+				<label class="custom-radio" for="email1">
+				{{ email }}
+				<span class="arrow">▼</span>
+				</label>
+			</div>
+		</div>
+		
+
+		<form action="https://you-are-idiot.github.io/">
+			<div>
+				<input class="textbox" type="password" placeholder="Enter your password">
+				<div>
+					<input type="checkbox" class="custom-checkbox" name="show" value="show">
+					<label for="show">Show password</label>
+				</div>
+				
+			</div>
+
+			<div style="padding: 25px;"></div>
+
+			<div class="bottom">
+				<button class="forgo" onclick="openPopup()"><a class="link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><p>Forgot password?</p></a></button>
+				<button class="butt" onclick="openPopup()"><input type="submit" value="Next" style="background-color: transparent;border: none;"></button>
+			</div>
+			
+		</form>
+	</div>
+	<div class="below">
+		<select class="forgo2">
+			<option value="English">English (United States)</option>
+		</select>
+
+		<div>
+			<button class="forgo2" onclick="openPopup()">
+				<a>
+					<p>Help</p>
+				</a>
+			</button >
+			<button class="forgo2" onclick="openPopup()">
+				<a>
+					<p>Privacy</p>
+				</a>
+			</button>
+			<button class="forgo2">
+				<a>
+					<p>Terms</p>
+				</a>
+			</button>
+		</div>
+	</div>
+
+	<div class="spacer"></div>
+</body>
+
+</html>
