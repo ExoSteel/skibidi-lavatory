@@ -14,9 +14,12 @@ def next():
     else:
         return render_template("next.html", email="You aren't supposed to do that")
 
-@app.route("/youareanidiot")
+@app.route("/consequenceofactions", methods=["POST", "GET"])
 def yaai():
-    return render_template("yaai.html")
+    if request.method == 'POST':
+        return render_template("yaai.html")
+    else:
+        return "You're not supposed to do that"
 
 if __name__ == "__main__":
     app.run(port=5000)
