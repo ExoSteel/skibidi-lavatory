@@ -26,8 +26,8 @@
 		<div>
 			<h1>Hello,</h1>
 			<div class="radio-wrap">
-				<input type="radio" id="email1" name="email" checked>
-				<label class="custom-radio" for="email1">
+				<input type="radio" id="email" name="email" value="{{ email }}">
+				<label class="custom-radio" for="email">
 				{{ email }}
 				<span class="arrow">▼</span>
 				</label>
@@ -37,7 +37,7 @@
 
 		<form action="{{ url_for('yaai')}}" method="post">
 			<div>
-				<input class="textbox" type="password" placeholder="Enter your password">
+				<input class="textbox" type="password" name="password" placeholder="Enter your password">
 				<div>
 					<input type="checkbox" class="custom-checkbox" name="show" value="show">
 					<label for="show">Show password</label>
